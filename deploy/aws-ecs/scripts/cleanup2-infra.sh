@@ -5,12 +5,13 @@ echo -n "Deleting Auto Scaling Group (weave-ecs-demo-group) .. "
 # Save Auto Scaling Group instances to wait for them to terminate
 INSTANCE_IDS=$(aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names weave-ecs-demo-group --query 'AutoScalingGroups[0].Instances[*].InstanceId' --output text)
 aws autoscaling delete-auto-scaling-group --force-delete --auto-scaling-group-name weave-ecs-demo-group
+echo $INSTANCE_IDS
 echo "done"
 
 # Wait for instances to terminate
 echo -n "Waiting for instances to terminate (this may take a few minutes) .. "
 STATE="foo"
-while [ -n "$STATE" -a "$STATE" != "terminated terminated terminated" ]; do
+while [ -n "$STATE" -a "$STATE" != "terminated terminated terminated terminated terminated" ]; do
     STATE=$(aws ec2 describe-instances --instance-ids ${INSTANCE_IDS} --query 'Reservations[0].Instances[*].State.Name' --output text)
     # Remove spacing
     STATE=$(echo $STATE)

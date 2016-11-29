@@ -68,7 +68,7 @@ CLUSTER_STATUS=$(aws ecs describe-clusters --clusters weave-ecs-demo-cluster --q
 if [ "$CLUSTER_STATUS" != "None" -a "$CLUSTER_STATUS" != "INACTIVE" ]; then
     echo "error: ECS cluster weave-ecs-demo-cluster is active, run cleanup.sh first"
     exit 1
-fi    
+fi
 
 
 set -euo pipefail
@@ -158,7 +158,7 @@ aws autoscaling create-launch-configuration --image-id $AMI --launch-configurati
 echo "done"
 
 # Auto Scaling Group
-scale=3
+scale=5
 echo -n "Creating Auto Scaling Group (weave-ecs-demo-group) with $scale instances .. "
 aws autoscaling create-auto-scaling-group --auto-scaling-group-name weave-ecs-demo-group --launch-configuration-name weave-ecs-launch-configuration --min-size $scale --max-size $scale --desired-capacity $scale --vpc-zone-identifier $SUBNET_ID
 
