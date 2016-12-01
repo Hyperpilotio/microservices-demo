@@ -820,6 +820,7 @@
                     "ecs:DescribeServices",
                     "ec2:DescribeInstances",
                     "ec2:DescribeTags",
+                    "ecs:StartTelemetrySession",
                     "autoscaling:DescribeAutoScalingInstances"
                   ],
                   "Resource": [

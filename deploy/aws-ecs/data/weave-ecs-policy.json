@@ -13,9 +13,10 @@
                 "ecs:ListClusters",
                 "ecs:ListContainerInstances",
                 "ecs:DescribeContainerInstances",
+                "ecs:StartTelemetrySession",
                 "ecs:ListServices",
                 "ecs:DescribeTasks",
-                "ecs:DescribeServices",	    
+                "ecs:DescribeServices",
                 "ec2:DescribeInstances",
                 "ec2:DescribeTags",
                 "autoscaling:DescribeAutoScalingInstances"

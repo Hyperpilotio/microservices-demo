@@ -41,8 +41,9 @@ echo "done"
 
 # Security group
 echo -n "Deleting Security Group (weave-ecs-demo) .. "
-GROUP_ID=$(aws ec2 describe-security-groups --query 'SecurityGroups[?GroupName==`weave-ecs-demo`].GroupId' --output text)
-aws ec2 delete-security-group --group-id "$GROUP_ID"
+for group_id in $(aws ec2 describe-security-groups --query 'SecurityGroups[?GroupName==`weave-ecs-demo`].GroupId' --output text); do
+    aws ec2 delete-security-group --group-id $group_id
+done
 echo "done"
 
 # Internet Gateway
