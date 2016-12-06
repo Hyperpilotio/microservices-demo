@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "weaveworksdemos/catalogue",
+            "cpu": 256,
             "memory": 256,
             "name": "catalogue"
         }

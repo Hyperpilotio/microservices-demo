@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "weaveworksdemos/edge-router",
+            "cpu": 256,
             "memory": 256,
             "name": "edge-router",
             "portMappings": [

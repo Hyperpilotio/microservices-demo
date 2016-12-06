@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "weaveworksdemos/payment",
+            "cpu": 256,
             "memory": 256,
             "name": "payment"
         }

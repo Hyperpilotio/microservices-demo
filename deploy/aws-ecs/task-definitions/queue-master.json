@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "weaveworksdemos/queue-master",
+            "cpu": 256,
             "memory": 256,
             "mountPoints": [
                 {

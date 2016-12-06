@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "mongo",
+            "cpu": 256,
             "memory": 256,
             "name": "cart-db"
         }

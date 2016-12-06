@@ -11,7 +11,7 @@ echo "done"
 # Wait for instances to terminate
 echo -n "Waiting for instances to terminate (this may take a few minutes) .. "
 STATE="foo"
-while [ -n "$STATE" -a "$STATE" != "terminated terminated terminated terminated terminated" ]; do
+while [ -n "$STATE" -a "$STATE" != "terminated terminated terminated terminated terminated terminated terminated" ]; do
     STATE=$(aws ec2 describe-instances --instance-ids ${INSTANCE_IDS} --query 'Reservations[0].Instances[*].State.Name' --output text)
     # Remove spacing
     STATE=$(echo $STATE)

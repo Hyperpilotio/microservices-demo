@@ -4,6 +4,7 @@
         {
             "essential": true,
             "image": "weaveworksdemos/user-db",
+            "cpu": 256,
             "memory": 256,
             "name": "user-db"
         }
