@@ -6,7 +6,15 @@
             "image": "weaveworksdemos/catalogue",
             "cpu": 256,
             "memory": 256,
-            "name": "catalogue"
+            "name": "catalogue",
+                      "ulimits": [
+              {
+                "softLimit": 12000,
+                "hardLimit": 12000,
+                "name": "nofile"
+              }
+            ]
+
         }
     ]
 }

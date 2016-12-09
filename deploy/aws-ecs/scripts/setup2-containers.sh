@@ -27,12 +27,13 @@ do
 done
 echo "done"
 
+echo "Tasks will start running soon"
 # Wait for tasks to start running
-echo -n "Waiting for tasks to start running .. "
-count=$(echo task-definitions/*.json |wc -w)
-while [ "$(aws ecs describe-clusters --clusters weave-ecs-demo-cluster --query 'clusters[0].runningTasksCount')" -ne $count ]
-do
-    echo "Not done yet..."
-    sleep 2
-done
-echo "done"
+#echo -n "Waiting for tasks to start running .. "
+#count=$(echo task-definitions/*.json |wc -w)
+#while [ "$(aws ecs describe-clusters --clusters weave-ecs-demo-cluster --query 'clusters[0].runningTasksCount')" -ne $count ]
+#do
+#    echo "Not done yet..."
+#    sleep 2
+#done
+#echo "done"

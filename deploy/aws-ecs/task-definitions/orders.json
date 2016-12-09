@@ -6,7 +6,15 @@
             "image": "weaveworksdemos/orders",
             "cpu": 256,
             "memory": 256,
-            "name": "orders"
+            "name": "orders",
+                                "ulimits": [
+              {
+                "softLimit": 12000,
+                "hardLimit": 12000,
+                "name": "nofile"
+              }
+            ]
+
         }
     ]
 }

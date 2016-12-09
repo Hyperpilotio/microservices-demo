@@ -6,7 +6,15 @@
             "image": "weaveworksdemos/cart",
             "cpu": 256,
             "memory": 256,
-            "name": "cart"
+            "name": "cart",
+                      "ulimits": [
+              {
+                "softLimit": 12000,
+                "hardLimit": 12000,
+                "name": "nofile"
+              }
+            ]
+
         }
     ]
 }
