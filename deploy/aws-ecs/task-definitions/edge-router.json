@@ -7,6 +7,12 @@
             "cpu": 256,
             "memory": 256,
             "name": "edge-router",
+            "environment": [
+              {
+                "name": "SERVICE_80_NAME",
+                "value": "edge-router"
+              }
+            ],
             "portMappings": [
                 {
                     "containerPort": 80,

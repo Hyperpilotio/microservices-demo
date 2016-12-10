@@ -15,6 +15,10 @@
               {
                 "name": "MYSQL_DATABASE",
                 "value": "socksdb"
+              },
+              {
+                "name": "SERVICE_3306_NAME",
+                "value": "catalogue-db"
               }
             ],
             "portMappings": [

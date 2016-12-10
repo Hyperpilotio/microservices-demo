@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load the latest WEAVE AMIs
-WEAVE_ECS_AMIS=( $(curl -L -s https://raw.githubusercontent.com/weaveworks/integrations/master/aws/ecs/README.md | sed -n -e 's/^| *\([^| ]*\) *| *\(ami-[^| ]*\) *|$/\1:\2/p' ) )
+WEAVE_ECS_AMIS=( $(curl -L -s https://gist.githubusercontent.com/swhsiang/033aa6ca82dbed4ab486b0e9b0cd4503/raw/889c7c4953b4c712948069d8d9761aafdc07135d/aws-optimized-ami.md | sed -n -e 's/^| *\([^| ]*\) *| *\(ami-[^| ]*\) *|$/\1:\2/p' ) )
 
 SCOPE_AAS_PROBE_TOKEN="$1"
 
