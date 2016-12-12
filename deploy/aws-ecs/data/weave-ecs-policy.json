@@ -19,7 +19,9 @@
                 "ecs:DescribeServices",
                 "ec2:DescribeInstances",
                 "ec2:DescribeTags",
-                "autoscaling:DescribeAutoScalingInstances"
+                "autoscaling:DescribeAutoScalingInstances",
+                "route53:*",
+                "elasticloadbalancing:DescribeLoadBalancers"
             ],
             "Resource": [
                 "*"

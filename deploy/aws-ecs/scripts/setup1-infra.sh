@@ -158,7 +158,7 @@ aws autoscaling create-launch-configuration --image-id $AMI --launch-configurati
 echo "done"
 
 # Auto Scaling Group
-scale=7
+scale=8
 echo -n "Creating Auto Scaling Group (weave-ecs-demo-group) with $scale instances .. "
 aws autoscaling create-auto-scaling-group --auto-scaling-group-name weave-ecs-demo-group --launch-configuration-name weave-ecs-launch-configuration --min-size $scale --max-size $scale --desired-capacity $scale --vpc-zone-identifier $SUBNET_ID
 

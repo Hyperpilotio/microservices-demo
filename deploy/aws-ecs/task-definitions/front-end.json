@@ -6,7 +6,18 @@
             "image": "weaveworksdemos/front-end",
             "cpu": 256,
             "memory": 256,
-            "name": "front-end"
+            "name": "front-end",
+            "environment": [
+              {
+                "name": "SERVICE_8079_NAME",
+                "value": "front-end"
+              }
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 8079
+                }
+            ]
         }
     ]
 }
